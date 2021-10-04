@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1 UHS EVN401 FW UTL</title>
+    <link rel="stylesheet" href="css/ejs3.css" type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+</head>
+<body>
+    <body background="img/javascript_logo3.png">
+    <header>
+        <h1><a href="#">Actividad 1, 4 y 6</a></h1>
+    </header>
+    <section class="row container-fluid" id="todo">
+        <aside id="lateral" class="col-sm-3">
+            <label for="temas" id="menu">Menú de Navegación</label>
+            <select name="temas" id="temas">
+                <option value="bienv" default>Seleccione uno...</option>
+                <option value="cajas">Cajas</option>
+                <option value="cuest">Cuestionario</option>
+                <option value="nodos">Reservación de Mesas</option>
+                <option value="tarjeta_fel">Tajerta de Felicitación</option>
+            </select>
+        </aside>  
+        <section id="principal" class="col-sm-9">
+            <div id="bienv" class="bienv">
+                <h1 id="bienv_text">Bienvenido a una Aplicación Web de Javascript</h1>
+                <h2 id="bienv_text">Uriel Hernández Santamaría EVN401</h2>
+                <h2 id="bienv_text">Mtra. Anahí Montserrat Torres Tinoco</h2>
+                <h2 id="bienv_text">Materia: Frameworks</h2><br>
+                <img src="img/utllogo.png" alt="utl_logo" id="utl_logo">
+            </div>
+            <article id="cajas" class="contenedor">
+                <h3>Elige el Número de Cajas y su Estilo</h3></br>
+                <input type="text" id="numcaj" placeholder="Introduce el Número"/>
+                <p></br></p>
+                <label for="colorcaj">Seleccione un Color</label>
+                <select name="colorcaj" id="colorcaj">
+                    <option value="ro">Rojo</option>
+                    <option value="az">Azul</option>
+                    <option value="am">Amarillo</option>
+                    <option value="ve">Verde</option>
+                    <option value="vi">Violeta</option>
+                </select>
+                <label for="tipoborde">Seleccione un Borde</label>
+                <select name="tipoborde" id="tipoborde">
+                    <option value="so">Solido</option>
+                    <option value="pu">Punteado</option>
+                    <option value="li">Lineado</option>
+                    <option value="do">Doble</option>
+                </select> 
+                <input type="button" value="Mostrar" onClick="mostrarCajas()">
+                <p></br></p>
+                <div class="fluid-container">
+                    <p id="mostrarcajas"></p>
+                </div>
+            </article>
+            <article id="cuest" class="contenedor">
+                <div id="preguntas_encuesta">
+                    <h3>Conteste esta breve encuesta sobre Videojuegos</h3><br>
+                    <label for="resp_1" id="preg_1">1)¿Qué tipo de videojuegos prefiere?</label>
+                        <select name="resp_1" id="resp_1">
+                            <option value="de Guerra">Guerra</option>
+                            <option value="de Fantasía">Fantasía</option>
+                            <option value="Deportivos">Deportivo</option>
+                        </select><br><br>
+                    <label for="resp_2" id="preg_2">2)¿Cuántas horas a la semana juega videojuegos?</label>
+                        <select name="resp_2" id="resp_2">
+                            <option value="de 3 a 5 hrs.">3 a 5 hrs.</option>
+                            <option value="de 5 a 10 hrs.">5 a 10 hrs.</option>
+                            <option value="de 10 a 15 hrs.">10 a 15 hrs.</option>
+                        </select><br><br>
+                    <label for="resp_3" id="preg_3">3)¿Qué sistema de videojuegos prefiere?</label>
+                        <select name="resp_3" id="resp_3">
+                            <option value="Playstation">Playstation</option>
+                            <option value="Xbox">Xbox</option>
+                            <option value="Nintendo">Nintendo</option>
+                        </select><br><br>
+                    <label for="resp_4" id="preg_4">4)¿Con quién prefiere jugar videojuegos?</label>
+                        <select name="resp_4" id="resp_4">
+                            <option value="En solitario">En solitario</option>
+                            <option value="En cooperativo local">En cooperativo local</option>
+                            <option value="En cooperativo online">En cooperativo online</option>
+                        </select><br><br>
+                    <label for="resp_5" id="preg_5">5)¿Cuánto dinero gasta al mes en videojuegos?</label>
+                        <select name="resp_5" id="resp_5">
+                            <option value="de $100 a $300 MXN.">de $100 a $300 MXN.</option>
+                            <option value="de $300 a $500 MXN.">de $300 a $500 MXN.</option>
+                            <option value="de $500 a $1000 MXN.">de $500 a $1000 MXN.</option>
+                        </select><br><br>
+                    <input type="button" value="Mostrar Resultados" onClick="mostrarResultados()">
+                </div>
+                <div id="mostrarresultados" class="fluid-container">
+                    <h3 id="titulo_resp"></h3><br>
+                    <div id="pr1"></div><br>
+                    <div id="pr2"></div><br>
+                    <div id="pr3"></div><br>
+                    <div id="pr4"></div><br>
+                    <div id="pr5"></div><br>
+                </div>
+            </article>
+            <article id="nodos" class="contenedor">
+                <h3>Reservación de mesas</h3>
+                <select id="reservacion">
+                    <option value="0">Seleccione una opción</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <p id="mesas"></p>
+                <a id="mostrar">Mostrar</a>
+            </article>
+            <article id="tarjeta_fel" class="contenedor">
+                <h3>Crea tu Tarjeta de Felicitación</h3><br>
+                <h4>Elige el tipo de Tarjeta</h4>
+                <select id="tipo_tar">
+                    <option value="0">Seleccione un tipo</option>
+                    <option value="tar_nav">Tarjeta Navideña</option>
+                    <option value="dia_ind">Día de la Independencia</option>
+                    <option value="dia_prog">Día del Programador</option>
+                </select><br><br>
+                <div id="tar_nav" name="tar_img" class="contenedorImg">
+                    <p>
+                        <img src="img/navidad1.png" alt="" style="width: 280px; margin: 10px 10px;" onclick="imgTarjeta('navidad1')">
+                        <img src="img/navidad2.png" alt="" style="width: 280px; margin: 10px 10px;" onclick="imgTarjeta('navidad2')">
+                        <img src="img/navidad3.png" alt="" style="width: 280px; margin: 10px 10px;" onclick="imgTarjeta('navidad3')">
+                    </p>
+                </div>
+                <div id="dia_ind" name="tar_img" class="contenedorImg">
+                    <p>
+                        <img src="img/d_independencia1.png" alt="" style="width: 280px; margin: 10px 10px;" onclick="imgTarjeta('d_independencia1')">
+                        <img src="img/d_independencia2.png" alt="" style="width: 280px; margin: 10px 10px;" onclick="imgTarjeta('d_independencia2')">
+                        <img src="img/d_independencia3.png" alt="" style="width: 280px; margin: 10px 10px;" onclick="imgTarjeta('d_independencia3')">
+                    </p>
+                </div>
+                <div id="dia_prog" name="tar_img" class="contenedorImg">
+                    <p>
+                        <img src="img/d_programador1.png" alt="" style="width: 280px; margin: 10px 10px;" onclick="imgTarjeta('d_programador1')">
+                        <img src="img/d_programador2.png" alt="" style="width: 280px; margin: 10px 10px;" onclick="imgTarjeta('d_programador2')">
+                        <img src="img/d_programador3.png" alt="" style="width: 280px; margin: 10px 10px;" onclick="imgTarjeta('d_programador3')">
+                    </p>
+                </div>
+                <p>Elige un color de fondo:&nbsp;<input type="color" id="bcg_col"></p><br>
+                <h4>Datos de la Tarjeta</h4><br>
+                <input type="text" placeholder="Nombre a quién se envía" id="nombre_envia" style="width: 30rem;" oninput="nombreEnvia()"><input type="color" id="color_nombre_envía" oninput="nombreEnvia()"><br><br>
+                <input type="text" placeholder="Saludo" id="saludo" style="width: 30rem;" oninput="saludoTexto()"><input type="color" id="color_saludo" oninput="saludoTexto()"><br><br>
+                <form>
+                    <textarea name="cuerpo_tex" id="cuerpo_tex" cols="50" rows="8" placeholder="Capture el cuerpo del mensaje" oninput="cuerpoTexto()"></textarea>
+                    <input type="color" id="color_cuerpo_tex" oninput="cuerpoTexto()">
+                </form>
+                <h3>Vista Previa</h3>
+                <div id="VistaPrevia" class="VistaPrevia">
+                    <div>
+                        <div id="nombre_envia_caja">
+                            <p id="nombre_envia_texto"></p>
+                        </div>
+                        <div id="saludo_texto_caja">
+                            <p id="saludo_texto"></p>
+                        </div>
+                        <div id="cuerpo_texto_caja">
+                            <p id="cuerpo_texto"></p>
+                        </div>
+                        <div id="Vista_Previa_Img">
+                            <img src="img/fondo.png" alt="" id="Vista_Previa" style="width: 750px; height: 530px; margin: 47px 10px;">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a id="mostrar_tarfel">Generar Tarjeta</a>
+                </div>
+            </article>
+            <p id="resultado" class="res">
+                Mostrar resultados desde Javascript
+            </p>
+        </section>
+    </section>
+<script src="js/funcionalidad.js"></script>
+<footer>
+   <h5>Realizado Por: Uriel Hernández Santamaría EVN401 UTL</h5> 
+</footer>
+</body>
+</html>
+

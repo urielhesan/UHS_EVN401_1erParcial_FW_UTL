@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+}
+body{
+    width: 100%;
+}
+header{
+    background-color: #512D6D;
+    text-align: center;
+}
+header a{
+    text-decoration: none;
+    color: #EEEEEE;
+    display: block;
+    font-size: 2.5rem;
+}
+header a:hover{
+    text-decoration: none;
+    color: #F8485E
+}
+section{
+    background-color: rgba(0,193,212,.55);
+    font-size: 1.2rem;
+}
+#lateral{
+    background-color: #F8485E;
+    text-align: center;
+    padding: 50px 100px;
+}
+footer{
+    background-color: #512D6D;
+    color:#EEEEEE;
+    text-align: center;
+    padding: 20px 0;
+}
+.contenedor{
+    width: 99%;
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+    display: none;
+}
+.contenedorImg{
+    display: none;
+}
+#resultado{
+    transition: all .4s ease-in-out;
+}
+.res{
+    width: 99%;
+    line-height: 25px;
+    border: solid 3px #512D6D;
+    padding: 10px;
+    margin: 10px;
+}
+#mostrarcajas{
+    font-size: 50px;
+}
+#todo{
+    height: auto;
+}
+#utl_logo{
+    width: 20%;
+}
+#menu{
+    font-size: 30px;
+    color: #512D6D;
+}
+#menu:hover{color: #EEEEEE;}
+#bienv_text{
+    color: black;
+}
+.VistaPrevia{
+    width: 950px;
+    height: 630px;
+}
+#Vista_Previa_Img{
+    float: initial;
+}
+#nombre_envia_caja{
+    position: absolute;
+    top: 1050px;
+    left: 200px;
+
+}
+#saludo_texto_caja{
+    position: absolute;
+    top: 1120px;
+    left: 200px;
+}
+#cuerpo_texto_caja{
+    position: absolute;
+    top: 1200px;
+    left: 200px;
+}
+#Vista_Previa_Img1{
+    float: initial;
+}
+#nombre_envia_caja1{
+    position: absolute;
+    top: 168px;
+    left: 380px;
+}
+#saludo_texto_caja1{
+    position: absolute;
+    top: 238px;
+    left: 380px;
+}
+#cuerpo_texto_caja1{
+    position: absolute;
+    top: 318px;
+    left: 380px;
+}
+#Tar_Fel_Caja{
+    margin-left: 15%;
+}
